@@ -1,7 +1,56 @@
 {
   "date": "2026-10-24",
-  "validation": "Lectura JSON, sintaxis Python y comparación de bytes; ningún cuaderno ejecutado.",
+  "validation": "Tres descargas originales byte idénticas y una exportación UI con seis celdas preservadas y envoltorio reconstruido; estructura JSON y sintaxis revisadas sin ejecutar celdas.",
   "notebooks": [
+    {
+      "original_name": "normalizacion_filtros_prueba.ipynb",
+      "repository_path": "notebooks/00-normalizacion-filtros-imagenes.ipynb",
+      "drive_id": "1SXsX6ZNFboIKXqcyHwz3VJhJZIC2wIiX",
+      "source_url": "https://colab.research.google.com/drive/1SXsX6ZNFboIKXqcyHwz3VJhJZIC2wIiX",
+      "sha256": "ad95e7b33259b5d12ee64155ef71e5bdfc5b13490046f53de8d63c4c95af0588",
+      "sha256_scope": "Archivo reconstruido tras exportar celdas desde la interfaz; no es un hash del archivo completo de Drive.",
+      "bytes": 112017,
+      "cells": 6,
+      "code_cells": 6,
+      "saved_outputs": 6,
+      "original_bytes_preserved": false,
+      "export_file_bytes_preserved": true,
+      "cells_preserved": true,
+      "cells_canonical_sha256": "cc9a903b2e0840673bbc2782e6cee7291d443b8f0366462382e87466e7acb6c2",
+      "ui_cells_payload_sha256": "06eb9998c82b4a81d26e058739ee8b55ce2cf040aa967e7815b022e2d949ea4d",
+      "export_method": "Colab Copy All Cells UI; comparación estructural exacta con el array JSON exportado.",
+      "reconstructed_root_metadata": {},
+      "reconstructed_nbformat": 4,
+      "reconstructed_nbformat_minor": 0,
+      "unavailable_original_root_metadata": true,
+      "syntax_checks": [
+        {
+          "cell": 0,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 1,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 2,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 3,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 4,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 5,
+          "valid_python_syntax": true
+        }
+      ],
+      "emoji_cells": []
+    },
     {
       "original_name": "ProcesamientoDeImagenes.ipynb",
       "repository_path": "notebooks/01-estadisticas-filtros-svm-knn.ipynb",

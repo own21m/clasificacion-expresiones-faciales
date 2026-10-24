@@ -1,6 +1,8 @@
 # Procedencia de los cuadernos
 
-Se recuperaron tres cuadernos proporcionados por el usuario y relacionados con el mismo experimento de clasificación `angry`/`happy`. Se organizaron por el contenido y la evolución del procesamiento; no se modificaron sus celdas, salidas o metadatos.
+Se recuperaron cuatro cuadernos proporcionados por el usuario y relacionados con el procesamiento de imágenes y la clasificación `angry`/`happy`. Los cuadernos `01`, `02` y `03` conservan los archivos completos descargados, byte por byte. El laboratorio `00` conserva las seis celdas y salidas exportadas desde la interfaz de Colab, con un envoltorio de cuaderno reconstruido.
+
+El archivo [00-normalizacion-filtros-imagenes.ipynb](../notebooks/00-normalizacion-filtros-imagenes.ipynb) procede de [normalizacion_filtros_prueba.ipynb](https://colab.research.google.com/drive/1SXsX6ZNFboIKXqcyHwz3VJhJZIC2wIiX). La documentación de [su exportación UI](EXPORTACION-NORMALIZACION.md) distingue la conservación de celdas de la conservación del archivo completo.
 
 | Archivo del repositorio                  | Fuente de Colab                                                                                                          |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -8,7 +10,7 @@ Se recuperaron tres cuadernos proporcionados por el usuario y relacionados con e
 | `02-balanceo-augmentation-svm-knn.ipynb` | [sistema-reconocimiento-emociones-ia-1.ipynb](https://colab.research.google.com/drive/1cujJ44Hh-vScQMSjpRg-lx-lCRbN-1a-) |
 | `03-hog-hu-clasificadores.ipynb`         | [emotion-recognition.ipynb](https://colab.research.google.com/drive/1hP1HcbwYB3Osr08moLfrKRq7ARajBMee)                   |
 
-El inventario [originales.json](originales.json) registra tamaños, SHA256, número de celdas y comprobaciones de sintaxis. Los hashes se calcularon sobre los archivos completos descargados y coinciden con las copias renombradas del repositorio.
+El inventario [originales.json](originales.json) registra tamaños, SHA256, número de celdas y comprobaciones de sintaxis. En `01`, `02` y `03` los hashes corresponden a los archivos completos descargados y coinciden con las copias renombradas. En `00` el hash corresponde al archivo reconstruido, no al original completo de Drive; también se registran hashes del contenido de celdas exportado.
 
 La clasificación de los cuadernos y la documentación se prepararon mediante lectura estática el 24 de octubre de 2026. Las fechas de las salidas corresponden a ejecuciones históricas, no a un entrenamiento realizado en esa fecha.
 

@@ -2,6 +2,14 @@
 
 Estos puntos describen el código conservado. No se aplicaron correcciones a los cuadernos.
 
+## Laboratorio de normalización recuperado desde la interfaz
+
+`00-normalizacion-filtros-imagenes.ipynb` espera la imagen `/content/Training_89091722.jpg`, que no se incluye como archivo independiente. Si no existe, `cv2.imread` devuelve `None` y el cuaderno no comprueba ese caso antes de utilizar la imagen. Su normalización divide por `max(image) - min(image)` sin tratar las imágenes constantes.
+
+El laboratorio no entrena modelos. Dos de sus seis celdas contienen únicamente comentarios y propuestas de procesamiento o guardado para uso futuro. Los valores impresos y las seis salidas se conservaron de la exportación, no se recalcularon.
+
+Se dispone de las seis celdas exportadas con **Copy All Cells**, pero no de la descarga completa del archivo original. La raíz del `.ipynb` fue reconstruida con metadatos vacíos. [ORIGEN.md](ORIGEN.md) y el inventario distinguen la conservación de celdas de una igualdad de bytes del archivo completo de Drive.
+
 ## Limpieza que modifica el conjunto de imágenes
 
 `remove_black_images` utiliza `os.remove` y comprueba `np.max(image) == np.min(image)`. Aunque los comentarios hablan de imágenes negras, esa condición identifica cualquier imagen uniforme, incluso si su valor constante es distinto de cero. La función se invoca para las carpetas de entrenamiento y prueba.
