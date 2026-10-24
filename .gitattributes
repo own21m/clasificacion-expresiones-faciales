@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Los cuadernos conservan sus bytes originales y no sufren conversión de saltos de línea.
+*.ipynb -text
+*.png binary

@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-24",
+  "validation": "Lectura JSON, sintaxis Python y comparación de bytes; ningún cuaderno ejecutado.",
+  "notebooks": [
+    {
+      "original_name": "ProcesamientoDeImagenes.ipynb",
+      "repository_path": "notebooks/01-estadisticas-filtros-svm-knn.ipynb",
+      "drive_id": "1Lu1sgCCQ5-jbSJj_bKNuJhEL-2jGx7Ie",
+      "source_url": "https://colab.research.google.com/drive/1Lu1sgCCQ5-jbSJj_bKNuJhEL-2jGx7Ie",
+      "sha256": "f0ec551e8b1ae2fc454081971569400d1e70dfb09ccf516df88e63988096b17a",
+      "bytes": 188664,
+      "cells": 12,
+      "code_cells": 9,
+      "saved_outputs": 15,
+      "original_bytes_preserved": true,
+      "syntax_checks": [
+        {
+          "cell": 0,
+          "valid_python_syntax": false,
+          "line": 1,
+          "error": "invalid character '⁸' (U+2078)"
+        },
+        {
+          "cell": 1,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 2,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 3,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 4,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 6,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 8,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 9,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 11,
+          "valid_python_syntax": true
+        }
+      ],
+      "emoji_cells": []
+    },
+    {
+      "original_name": "sistema-reconocimiento-emociones-ia-1.ipynb",
+      "repository_path": "notebooks/02-balanceo-augmentation-svm-knn.ipynb",
+      "drive_id": "1cujJ44Hh-vScQMSjpRg-lx-lCRbN-1a-",
+      "source_url": "https://colab.research.google.com/drive/1cujJ44Hh-vScQMSjpRg-lx-lCRbN-1a-",
+      "sha256": "cc6851abaad1f97e836b8c9e602a7ad3c254ce722021ceaf29eecb5e0539a381",
+      "bytes": 386689,
+      "cells": 13,
+      "code_cells": 13,
+      "saved_outputs": 24,
+      "original_bytes_preserved": true,
+      "syntax_checks": [
+        {
+          "cell": 0,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 1,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 2,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 3,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 4,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 5,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 6,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 7,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 8,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 9,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 10,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 11,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 12,
+          "valid_python_syntax": true
+        }
+      ],
+      "emoji_cells": []
+    },
+    {
+      "original_name": "emotion-recognition.ipynb",
+      "repository_path": "notebooks/03-hog-hu-clasificadores.ipynb",
+      "drive_id": "1hP1HcbwYB3Osr08moLfrKRq7ARajBMee",
+      "source_url": "https://colab.research.google.com/drive/1hP1HcbwYB3Osr08moLfrKRq7ARajBMee",
+      "sha256": "884c2fc03b5fa5e0f25a8da9ec2817c9511c8a3934f6de10cab4b091b0dc1c76",
+      "bytes": 141555,
+      "cells": 9,
+      "code_cells": 9,
+      "saved_outputs": 16,
+      "original_bytes_preserved": true,
+      "syntax_checks": [
+        {
+          "cell": 0,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 1,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 2,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 3,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 4,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 5,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 6,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 7,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 8,
+          "valid_python_syntax": true
+        }
+      ],
+      "emoji_cells": []
+    }
+  ]
+}

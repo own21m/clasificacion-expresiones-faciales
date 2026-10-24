@@ -1,0 +1,11 @@
+# Paquetes importados por los cuadernos originales; no se registraron versiones fijas.
+# google.colab es proporcionado por Colab y no se añade como paquete local.
+numpy
+matplotlib
+pandas
+scipy
+opencv-python
+scikit-learn
+scikit-image
+seaborn
+joblib

@@ -1,0 +1,16 @@
+# Datos, modelos entrenados y archivos de entorno no forman parte de esta recuperación.
+data/
+datasets/
+models/
+*.pkl
+*.joblib
+*.h5
+*.keras
+.env
+.env.*
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+Thumbs.db
+.DS_Store
