@@ -1,6 +1,6 @@
 # Procedencia de los cuadernos
 
-Se recuperaron cuatro cuadernos proporcionados por el usuario y relacionados con el procesamiento de imágenes y la clasificación `angry`/`happy`. Los cuadernos `01`, `02` y `03` conservan los archivos completos descargados, byte por byte. El laboratorio `00` conserva las seis celdas y salidas exportadas desde la interfaz de Colab, con un envoltorio de cuaderno reconstruido.
+Se recuperaron cinco cuadernos proporcionados por el usuario y relacionados con el procesamiento de imágenes y la clasificación `angry`/`happy`. Los cuadernos `01`, `02` y `03` conservan los archivos completos descargados, byte por byte. El laboratorio `00` conserva las seis celdas y salidas exportadas desde la interfaz de Colab, con un envoltorio de cuaderno reconstruido.
 
 El archivo [00-normalizacion-filtros-imagenes.ipynb](../notebooks/00-normalizacion-filtros-imagenes.ipynb) procede de [normalizacion_filtros_prueba.ipynb](https://colab.research.google.com/drive/1SXsX6ZNFboIKXqcyHwz3VJhJZIC2wIiX). La documentación de [su exportación UI](EXPORTACION-NORMALIZACION.md) distingue la conservación de celdas de la conservación del archivo completo.
 
@@ -30,3 +30,7 @@ Se decodificaron las imágenes ya almacenadas dentro de los `.ipynb`; no se ejec
 No aparecen nombres de autores, coautores ni una licencia explícita en el contenido de estos tres cuadernos. Los identificadores de autoría técnicos de Colab se conservan dentro del JSON y no se interpretan como nombres o permisos de licencia.
 
 Este repositorio conserva los archivos facilitados y añade documentación sobre su contenido. No impone una nueva licencia al código, a los datos o a sus salidas, ni declara que todas las imágenes sean de autoría propia.
+
+## Copia sincronizada de exploración
+
+El archivo `04-exploracion-preprocesamiento-dataset.ipynb` conserva íntegro `copia.ipynb`, recuperado desde una carpeta sincronizada de Google Drive. Se asocia como candidato al ID `1MlVQedgbzwBtGYfZfyjBAWUo40hBQSXs` por coincidencia única del título en el inventario; no se verificó que sea la versión remota actual ni se reemplazaron los otros cuadernos. Consulta [ORIGEN-COPIA-SINCRONIZADA.md](ORIGEN-COPIA-SINCRONIZADA.md).

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "validation": "Tres descargas originales byte idénticas y una exportación UI con seis celdas preservadas y envoltorio reconstruido; estructura JSON y sintaxis revisadas sin ejecutar celdas.",
+  "validation": "Tres descargas completas, una exportación UI con celdas exactas y una copia sincronizada íntegra asociada por título; lectura estática sin ejecutar celdas.",
   "notebooks": [
     {
       "original_name": "normalizacion_filtros_prueba.ipynb",
@@ -217,6 +217,89 @@
         },
         {
           "cell": 8,
+          "valid_python_syntax": true
+        }
+      ],
+      "emoji_cells": []
+    },
+    {
+      "original_name": "copia.ipynb",
+      "repository_path": "notebooks/04-exploracion-preprocesamiento-dataset.ipynb",
+      "drive_id": "1MlVQedgbzwBtGYfZfyjBAWUo40hBQSXs",
+      "drive_id_verified_for_synchronized_file": false,
+      "source_url": "https://colab.research.google.com/drive/1MlVQedgbzwBtGYfZfyjBAWUo40hBQSXs",
+      "source_identity_basis": "Asociación candidata por título único normalizado en el inventario; identidad y versión remotas no comprobadas.",
+      "sha256": "615b73529fbfbda6cac8e396b9c784389acc46efdbcaef83ff71dd95a15eb3c7",
+      "sha256_scope": "Archivo completo de la copia sincronizada local, no garantía sobre la versión actual de Drive.",
+      "bytes": 931974,
+      "cells": 16,
+      "code_cells": 15,
+      "saved_outputs": 11,
+      "original_bytes_preserved": false,
+      "synchronized_copy_bytes_preserved": true,
+      "complete_local_notebook_preserved": true,
+      "root_metadata_reconstructed": false,
+      "current_remote_version_claimed": false,
+      "recovery_method": "Copia de archivo completo desde Google Drive sincronizado, sin modificar JSON.",
+      "syntax_checks": [
+        {
+          "cell": 0,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 1,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 2,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 3,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 4,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 5,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 6,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 7,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 8,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 9,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 10,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 12,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 13,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 14,
+          "valid_python_syntax": true
+        },
+        {
+          "cell": 15,
           "valid_python_syntax": true
         }
       ],

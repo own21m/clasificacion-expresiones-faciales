@@ -2,9 +2,9 @@
 
 Experimentos de visión por computador para distinguir las clases `angry` y `happy` mediante procesamiento de imágenes, descriptores visuales y modelos clásicos de aprendizaje automático.
 
-El repositorio reúne cuatro cuadernos del mismo proyecto. Conserva un laboratorio de normalización y filtros, los primeros ensayos con estadísticas y una versión posterior que combina HOG, momentos de Hu, SVM, KNN y regresión logística. Los archivos se han renombrado para describir su contenido.
+El repositorio reúne cinco cuadernos del mismo proyecto. Conserva un laboratorio de normalización y filtros, los primeros ensayos con estadísticas y una versión posterior que combina HOG, momentos de Hu, SVM, KNN y regresión logística. Los archivos se han renombrado para describir su contenido.
 
-Los cuadernos `01`, `02` y `03` conservan **los bytes completos de las descargas originales**. El cuaderno `00` se recuperó mediante la opción de copiar todas las celdas en Colab: conserva sus seis celdas y salidas, pero su envoltorio `.ipynb` fue reconstruido con metadatos de raíz vacíos. Esta diferencia se registra en [ORIGEN.md](docs/ORIGEN.md) y en el inventario.
+Los cuadernos `01`, `02` y `03` conservan **los bytes completos de las descargas originales**. El cuaderno `00` se recuperó mediante la opción de copiar todas las celdas en Colab: conserva sus seis celdas y salidas, pero su envoltorio `.ipynb` fue reconstruido con metadatos de raíz vacíos. El cuaderno `04` conserva el archivo íntegro de una copia sincronizada local; su asociación al ID de Drive se basa en el título único y no acredita la versión remota actual. Estas diferencias se registran en [ORIGEN.md](docs/ORIGEN.md) y en el inventario.
 
 ## Empezar por este cuaderno
 
@@ -17,6 +17,8 @@ La versión `03` presenta el recorrido más claro: cargar imágenes, extraer car
 ## Cuadernos conservados
 
 Como introducción al preprocesamiento, [00-normalizacion-filtros-imagenes.ipynb](notebooks/00-normalizacion-filtros-imagenes.ipynb) conserva el laboratorio `normalizacion_filtros_prueba.ipynb`: normalización min-max de una imagen, Sobel, Canny, filtros gaussiano, de mediana y bilateral, y dos medias como características. Su exportación de celdas se describe en [EXPORTACION-NORMALIZACION.md](docs/EXPORTACION-NORMALIZACION.md).
+
+[04-exploracion-preprocesamiento-dataset.ipynb](notebooks/04-exploracion-preprocesamiento-dataset.ipynb) añade la exploración de carpetas `angry`/`happy`, la extracción de ocho estadísticas, el guardado y carga de características NPY y su matriz de correlación. No entrena clasificadores. Comparte tres funciones con `01` y `02`, pero conserva otras celdas y una etapa distinta; [su procedencia y límites](docs/ORIGEN-COPIA-SINCRONIZADA.md) están documentados.
 
 Los tres cuadernos de clasificación y balanceo son:
 
@@ -72,7 +74,7 @@ La versión `01` utiliza las mismas carpetas dentro de `MyDrive/datasets/`. Las 
 
 El laboratorio `00` incluye como referencia [FER2013 en Kaggle, publicado por msambare](https://www.kaggle.com/datasets/msambare/fer2013), y lee la imagen `/content/Training_89091722.jpg`, que no se incluye como archivo independiente. Para repetir ese laboratorio hace falta aportar una imagen y revisar esa ruta en una copia de trabajo.
 
-Los otros tres cuadernos no identifican la procedencia ni la licencia de sus carpetas completas de entrenamiento. La referencia de `00` no acredita por sí sola el origen o los permisos de todas las imágenes utilizadas. El repositorio no añade el conjunto completo ni los modelos `.pkl` que se producen al entrenar. Conserva las salidas históricas, algunas de las cuales muestran muestras de imágenes en `00` y `02`.
+Los cuadernos de clasificación y el laboratorio `04` no identifican la procedencia ni la licencia de sus carpetas completas de entrenamiento. La referencia de `00` no acredita por sí sola el origen o los permisos de todas las imágenes utilizadas. El repositorio no añade el conjunto completo ni los modelos `.pkl` que se producen al entrenar. Conserva las salidas históricas, algunas de las cuales muestran muestras de imágenes en `00` y `02`.
 
 Las etiquetas están codificadas como `angry=0` y `happy=1` en la versión principal. Describen las clases del experimento; el proyecto no constituye un diagnóstico del estado emocional de una persona.
 
@@ -105,6 +107,7 @@ No se necesita una GPU para los algoritmos usados. La duración depende de la ca
 
 - La primera línea de `01` contiene un carácter superíndice 8 (`U+2078`) antes de `import cv2`, que provoca un error de sintaxis. Se conserva en el original; para ejecutarlo habría que retirar ese carácter en una copia de trabajo.
 - `00` espera una imagen local y no comprueba si `cv2.imread` devolvió `None`. Su normalización min-max tampoco trata el caso de una imagen constante, que haría cero el denominador. Dos celdas son únicamente código comentado para posibles experimentos futuros.
+- `04` utiliza `calculate_statistics` antes de su definición al ejecutar en orden. Guarda vectores de ocho características en archivos llamados `train_images.npy` y `test_images.npy`; esos nombres no significan que contengan imágenes. Escribirlos de nuevo reemplaza los archivos del mismo nombre en la carpeta de ejecución.
 - Las versiones `01` y `02` contienen bloques que ajustan `StandardScaler` con características de entrenamiento y prueba juntas. Esa mezcla introduce información del conjunto de prueba en el preprocesamiento y limita la interpretación de sus resultados.
 - Algunos experimentos de `02` aumentan o balancean también el conjunto de prueba; no representan la evaluación de una distribución externa intacta.
 - La carga usa los primeros elementos que devuelve `os.listdir`, sin lista de archivos guardada ni ordenación explícita. La selección de imágenes puede cambiar entre entornos.
@@ -115,7 +118,9 @@ No se necesita una GPU para los algoritmos usados. La duración depende de la ca
 
 Los `.ipynb` `01`, `02` y `03` se copiaron sin reserializar el JSON y sus bytes coinciden con las descargas de origen. En `00` se verificó la igualdad estructural de las seis celdas con el array exportado desde Colab; no se dispone del archivo completo de Drive para afirmar igualdad de sus bytes o metadatos de raíz.
 
-Se revisaron la estructura básica de los cuatro cuadernos y la sintaxis de sus 37 celdas de código. Se encontró el error de `U+2078` descrito en `01`; las otras 36 celdas son sintácticamente válidas, incluidas las que solo contienen comentarios. No se ejecutaron celdas, no se montó Drive y no se cargaron archivos de modelos.
+La copia sincronizada `04` se incorporó sin modificar sus bytes, celdas, salidas o metadatos disponibles. No reemplaza ninguna exportación anterior ni se presenta como última versión remota.
+
+Se revisaron la estructura básica de los cinco cuadernos y la sintaxis de sus 52 celdas de código. Se encontró el error de `U+2078` descrito en `01`; las otras 51 celdas son sintácticamente válidas, incluidas las que solo contienen comentarios. No se ejecutaron celdas, no se montó Drive y no se cargaron archivos de modelos.
 
 Los PNG de este README proceden de salidas que ya estaban guardadas; no se generaron nuevas métricas. Consulta [ORIGEN.md](docs/ORIGEN.md) para conocer los cambios de nombre y la procedencia.
 

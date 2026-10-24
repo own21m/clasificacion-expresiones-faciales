@@ -41,3 +41,9 @@ No se conservaron versiones fijas de paquetes, el conjunto completo de datos ni 
 ## Alcance de las etiquetas
 
 El proyecto distingue dos etiquetas de un conjunto de imágenes. No estima emociones internas verificadas, no identifica personas y no ofrece garantías para decisiones sobre individuos. No se documenta una validación por identidad ni una evaluación en un entorno de uso real.
+
+## Exploración de la copia sincronizada
+
+`04` llama en la celda 10 a una función que usa `calculate_statistics`, definida después en la celda 12. Las salidas históricas dependen de estado previo y no acreditan una ejecución limpia en orden. La carga no comprueba si OpenCV devolvió `None` y utiliza `os.listdir` sin ordenar. La exploración inicial carga todas las imágenes; la extracción posterior limita a 50 por clase y carpeta.
+
+La normalización devuelve la imagen original cuando es constante; no uniforma ese caso al mismo intervalo que las imágenes variables. La curtosis o asimetría de imágenes constantes pueden producir valores no finitos. El código guarda vectores de ocho características en archivos con sufijo `_images.npy`, y `np.save` puede reemplazar archivos existentes del mismo nombre. Esos archivos y las carpetas de imágenes no se incluyen. No hay entrenamiento ni métricas de clasificación en este cuaderno.
